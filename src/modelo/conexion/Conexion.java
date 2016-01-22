@@ -3,7 +3,7 @@ import java.sql.*;
 public class Conexion {
 
 	private String nombreBd="biblioteca";
-	private String usuario="maryon";
+	private String usuario="root";
 	private String password="best1995";
 	//private String url="jdbc::mysql://localhost/"+nombreBd;
 	private String url="jdbc:mysql://localhost:3306/"+nombreBd;

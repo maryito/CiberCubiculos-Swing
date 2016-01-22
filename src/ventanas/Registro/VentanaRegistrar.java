@@ -3,11 +3,7 @@ package ventanas;
 
 import controladores.Coordinador;
 import controladores.Logica;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
+import controladores.Procesos;
 import javax.swing.JOptionPane;
 import modelo.UsuarioVo;
 import modelo.conexion.UsuarioDao;
@@ -17,18 +13,12 @@ import modelo.conexion.UsuarioDao;
  *
  * @author maryonday
  */
-public class VentanaRegistrar extends javax.swing.JFrame implements Runnable  {
-     private Coordinador miCoordinador;
-     String hora, minutos, segundos, ampm, fecha ;
-     Calendar calendario;
-     Thread h1;
-
+public class VentanaRegistrar extends javax.swing.JFrame{
+    private Coordinador miCoordinador;     
     public VentanaRegistrar(ven_Principal miVentana, boolean b) {
        initComponents();
        setLocationRelativeTo(null);
-       setResizable(false); 
-        h1 = new Thread(this);
-        h1.start();
+       setResizable(false);       
     }
 
     
@@ -106,42 +96,7 @@ public class VentanaRegistrar extends javax.swing.JFrame implements Runnable  {
         btg_sexo.clearSelection();
         btg_academico.clearSelection();      
    }
-    @Override
-    public void run() {
-        Thread ct = Thread.currentThread();
-        while (ct == h1) {
-//            Hora();
-//            Fecha();
-            lb_hora.setText("Fecha: "+Fecha()+" "+ Hora());
-           // lb_hora.setText("Fecha: "+fecha +" "+ hora + ":" + minutos + ":" + segundos + " " + ampm);
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-            }
-        }
-    }
-    public  String Fecha(){
-         Date fechaHoraActual = new Date();
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        fecha = (dateFormat.format(fechaHoraActual));
-        return  ""+fecha;
-    }
-    public  String Hora() {
-        Calendar calendario = new GregorianCalendar();      
-
-        //calendario.setTime(fechaHoraActual);
-        ampm = calendario.get(Calendar.AM_PM) == Calendar.AM ? "AM" : "PM";
-
-        if (ampm.equals("PM")) {
-            int h = calendario.get(Calendar.HOUR_OF_DAY) - 12;
-            hora = h > 9 ? "" + h : "0" + h;
-        } else {
-            hora = calendario.get(Calendar.HOUR_OF_DAY) > 9 ? "" + calendario.get(Calendar.HOUR_OF_DAY) : "0" + calendario.get(Calendar.HOUR_OF_DAY);
-        }
-        minutos = calendario.get(Calendar.MINUTE) > 9 ? "" + calendario.get(Calendar.MINUTE) : "0" + calendario.get(Calendar.MINUTE);
-        segundos = calendario.get(Calendar.SECOND) > 9 ? "" + calendario.get(Calendar.SECOND) : "0" + calendario.get(Calendar.SECOND);
-        return  hora+":"+minutos+":"+segundos+" " + ampm;
-    }
+    
     public void setCoordinador(Coordinador miCoordinador) {
        this.miCoordinador = miCoordinador;
     }
@@ -463,7 +418,9 @@ public class VentanaRegistrar extends javax.swing.JFrame implements Runnable  {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    public  void InicarHora(){
+        Procesos time = new Procesos();
+    };
     private void bt_AceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_AceptarActionPerformed
         // TODO add your handling code here:
         registrar();        
@@ -491,7 +448,7 @@ public class VentanaRegistrar extends javax.swing.JFrame implements Runnable  {
     private javax.swing.JLabel lb_Cedula;
     private javax.swing.JLabel lb_Nombre;
     private javax.swing.JLabel lb_Sexo;
-    private javax.swing.JLabel lb_hora;
+    public static javax.swing.JLabel lb_hora;
     private javax.swing.JPanel pane_academia;
     private javax.swing.JPanel panel_datos;
     private javax.swing.JPanel panel_principal;

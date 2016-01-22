@@ -257,15 +257,15 @@ public class Ven_Cubico extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Lb_titulo1;
-    public javax.swing.JButton bt_Cubico1;
-    private javax.swing.JButton bt_Cubico2;
-    private javax.swing.JButton bt_Cubico3;
-    private javax.swing.JButton bt_Cubico4;
-    private javax.swing.JButton bt_Cubico5;
-    private javax.swing.JButton bt_Cubico6;
-    private javax.swing.JButton bt_Cubico7;
-    private javax.swing.JButton bt_Cubico8;
-    private javax.swing.JButton bt_Cubico9;
+    public static javax.swing.JButton bt_Cubico1;
+    public static javax.swing.JButton bt_Cubico2;
+    public static javax.swing.JButton bt_Cubico3;
+    public static javax.swing.JButton bt_Cubico4;
+    public static javax.swing.JButton bt_Cubico5;
+    public static javax.swing.JButton bt_Cubico6;
+    public static javax.swing.JButton bt_Cubico7;
+    public static javax.swing.JButton bt_Cubico8;
+    public static javax.swing.JButton bt_Cubico9;
     private javax.swing.JLayeredPane jLayeredPane2;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables

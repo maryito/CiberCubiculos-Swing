@@ -94,7 +94,7 @@ public class UsuarioDao {
                                   
                 connection=conexxion.getConnection();
                 cStmt = connection.prepareCall("{call bi_registro_cs()}");
-                cStmt.execute();
+                cStmt.execute(); 
                 cStmt.getResultSet();  
                 ResultSet rs = null;
                 ResultSet  r = null;

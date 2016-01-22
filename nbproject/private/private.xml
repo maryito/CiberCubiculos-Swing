@@ -5,7 +5,16 @@
         <group name="Sistema de Registro Biblioteca"/>
         <group>
             <file>file:/home/maryonday/NetBeansProjects/Sistema%20de%20Registro%20Biblioteca/src/ventanas/ven.java</file>
-            <file>file:/home/maryonday/NetBeansProjects/Sistema%20de%20Registro%20Biblioteca/.git/config</file>
+            <file>file:/home/maryonday/NetBeansProjects/Sistema%20de%20Registro%20Biblioteca/src/ventanas/Registro/VentanaConsultar.java</file>
+            <file>file:/home/maryonday/NetBeansProjects/Sistema%20de%20Registro%20Biblioteca/src/controladores/Principal.java</file>
+            <file>file:/home/maryonday/NetBeansProjects/Sistema%20de%20Registro%20Biblioteca/src/controladores/Aplicacion.java</file>
+            <file>file:/home/maryonday/NetBeansProjects/Sistema%20de%20Registro%20Biblioteca/src/controladores/Procesos.java</file>
+            <file>file:/home/maryonday/NetBeansProjects/Sistema%20de%20Registro%20Biblioteca/src/ventanas/Ven_Pri_Registro.java</file>
+            <file>file:/home/maryonday/NetBeansProjects/Sistema%20de%20Registro%20Biblioteca/src/ventanas/Cubico/VentanaCubico.java</file>
+            <file>file:/home/maryonday/NetBeansProjects/Sistema%20de%20Registro%20Biblioteca/src/controladores/Coordinador.java</file>
+            <file>file:/home/maryonday/NetBeansProjects/Sistema%20de%20Registro%20Biblioteca/src/ventanas/ven_Principal.java</file>
+            <file>file:/home/maryonday/NetBeansProjects/Sistema%20de%20Registro%20Biblioteca/src/ventanas/Registro/VentanaRegistrar.java</file>
+            <file>file:/home/maryonday/NetBeansProjects/Sistema%20de%20Registro%20Biblioteca/src/controladores/Logica.java</file>
         </group>
     </open-files>
 </project-private>

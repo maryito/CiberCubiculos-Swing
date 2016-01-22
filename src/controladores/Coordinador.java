@@ -1,12 +1,8 @@
 package controladores;
 
-import java.awt.Color;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Vector;
-import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import modelo.conexion.UsuarioDao;
 import ventanas.Cubico.VentanaCubico;
@@ -32,9 +28,10 @@ public class Coordinador {
     private ven_Principal miVentanaInicio;
     public Ven_Cubico miVentanaCubico;
     private VentanaCubico micubico;
-    
+    private Procesos misProcesos;
     
     public static boolean Usado = false;
+    
     
    public void setVentanaPrincipal(ven_Principal miVentana) {
        this.miVentana=miVentana;
@@ -53,6 +50,11 @@ public class Coordinador {
    public void setLogica(Logica miLogica) {
        this.miLogica=miLogica;
     }
+   
+   public  void setProcesos(Procesos misProcesos) {
+     this.misProcesos = misProcesos;   
+   }
+    
    public void setmiVentanaInicio(ven_Principal miVentanaInicio) {
        this.miVentanaInicio =miVentanaInicio;
     }
@@ -70,6 +72,10 @@ public class Coordinador {
     }
     
    // TRaer funciones con coordinador
+    public void IniciarTiempo(){        
+        Thread ini = new Thread(misProcesos);
+        ini.start();
+    }
      public void mostrarVentanaPrincipalRegistro() {
 	miVentainiRegistro.setVisible(true);	
         miVentainiRegistro.setState(miVentanaRegistrar.NORMAL);
@@ -160,6 +166,11 @@ public class Coordinador {
                     estado = "Actualizado";
                     icon = JOptionPane.INFORMATION_MESSAGE;
                     break; 
+                 case "cubiculoTiempo":
+                    informacion = "Se Acabo el tiempo en cubiculo #";
+                    estado = "Tiempo Terminado !";
+                    icon = JOptionPane.INFORMATION_MESSAGE;
+                    break; 
                 default:
                     informacion = "";
                     estado ="Error no categorizado";                   
@@ -168,8 +179,8 @@ public class Coordinador {
             JOptionPane.showMessageDialog(null,""+informacion,""+estado,icon);    }
 
     public String  MostrarFechaHora(String opc) {
-        String Fecha = miVentanaRegistrar.Fecha();
-        String Hora = miVentanaRegistrar.Hora();
+        String Fecha = misProcesos.Fecha();
+        String Hora = misProcesos.Hora();
         
         if(opc =="hora") {
             opc= Hora;
@@ -210,5 +221,7 @@ public class Coordinador {
       //  }
        
     }    
+
+
 }
     

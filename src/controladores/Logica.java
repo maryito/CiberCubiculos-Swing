@@ -17,8 +17,7 @@ import modelo.conexion.UsuarioDao;
 
 public class Logica {
     private Coordinador miCoordinador;
-  
-     
+    
      
     public static boolean ValidarCampos(String nombre, String apellido) {
     boolean Validarnombre= false, Validarapellido = false;  
@@ -60,9 +59,6 @@ public class Logica {
      }
     }  
     
-    void setLogica(Coordinador miCoordinador) {
-     this.miCoordinador = miCoordinador; 
-    }
     
     public  void Registro_leer_off_actualiza() {
       System.out.println("metodo leer");
@@ -141,6 +137,9 @@ public class Logica {
        }
 
      } 
-
      
+    
+    void setLogica(Coordinador miCoordinador) {
+     this.miCoordinador = miCoordinador; 
+    }
 }

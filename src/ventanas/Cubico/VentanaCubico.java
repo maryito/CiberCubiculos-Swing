@@ -545,24 +545,43 @@ public class VentanaCubico extends javax.swing.JFrame {
         Horas = Integer.parseInt(salida[0]); // convertidas en numero
         salida[1] =  Horas >= 9 ? "" + (Horas+2) : "0" + (Horas+2);
         if(listo == 1){
+            System.out.println("1---- "+listo);
             if(Horas>=10){
                 // pasaremos a la tarde
+                 System.out.println("1- estamos en la tarde ");
                 lb_hora.setText(salida[0]+""+salida[2]+" AM");
                 lb_horaSALIDAD.setText( salida[1]+""+salida[2]+" PM");
             }else{
                 // estamos en la manana 
+                System.out.println("1- estamos en la manana ");
+                int tem= Integer.parseInt(salida[0])-12;
+                if(tem < 0){
+                     salida[0]= ""+12;
+                }
                lb_hora.setText(salida[0]+""+salida[2]+" AM");
                lb_horaSALIDAD.setText( salida[1]+""+salida[2]+" AM");
+              
             }
             
         }else{
+            System.out.println(" ----"+listo);
             if(Horas>=10){
                 // pasaremos a la tarde
+                System.out.println(" ___ estamos en la tarde ");
                 //salida[2] = hora.substring(2,9);
+                int tem= Integer.parseInt(salida[1])-12;
+                if(tem == 0){
+                     salida[1]= ""+12;
+                }else{
+                salida[1] = ""+tem;
+                }
                 lb_hora.setText(salida[0]+""+salida[2]+" PM");
-                lb_horaSALIDAD.setText( salida[1]+""+salida[2]+" AM");
+                lb_horaSALIDAD.setText( salida[1]+""+salida[2]+" AM");                
+                
+              //  System.out.println(tem-12+" "+salida[1]);
             }else{
                 // estamos en la manana 
+               System.out.println(" ___ estamos en la manana ");
                lb_hora.setText(salida[0]+""+salida[2]+" PM");
                lb_horaSALIDAD.setText( salida[1]+""+salida[2]+" PM");
             }

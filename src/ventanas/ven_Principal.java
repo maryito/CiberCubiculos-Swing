@@ -137,10 +137,12 @@ public class ven_Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bt_CubiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_CubiculosActionPerformed
-        this.miCoordinador.mostrarVentanaCubiculo();
+        this.miCoordinador.IniciarTiempo();
+        this.miCoordinador.mostrarVentanaCubiculo();        
     }//GEN-LAST:event_bt_CubiculosActionPerformed
 
     private void bt_ComputadorasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_ComputadorasActionPerformed
+       this.miCoordinador.IniciarTiempo();
         this.miCoordinador.mostrarVentanaRegistro();
     }//GEN-LAST:event_bt_ComputadorasActionPerformed
 
