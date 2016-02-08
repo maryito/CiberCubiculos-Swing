@@ -1,5 +1,6 @@
 package controladores;
 
+import static controladores.Procesos.ini_cubiculo;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -75,6 +76,9 @@ public class Coordinador {
     public void IniciarTiempo(){        
         Thread ini = new Thread(misProcesos);
         ini.start();
+    }
+    public void IniciarCubiculo(){        
+        misProcesos.ini_cubiculo = true;
     }
      public void mostrarVentanaPrincipalRegistro() {
 	miVentainiRegistro.setVisible(true);	

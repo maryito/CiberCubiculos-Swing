@@ -2,13 +2,9 @@ package modelo.conexion;
 
 import java.sql.*;
 
-import modelo.conexion.Conexion;
 import controladores.Coordinador;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import modelo.UsuarioVo;
 
@@ -112,7 +108,7 @@ public class UsuarioDao {
                             m++;
                         }else{
                             f++;
-                           // System.out.println(rs.getString("sexo"));
+                            System.out.println(rs.getString("sexo"));
                         }
                         total++;
                     }else{

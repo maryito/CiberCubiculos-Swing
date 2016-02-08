@@ -3,9 +3,6 @@ package ventanas;
 
 import controladores.Coordinador;
 import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Rectangle;
-import java.awt.Toolkit;
 
 /**
  *
@@ -18,10 +15,8 @@ public class Ven_Cubico extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setResizable(false);
-        usocubiculo = Coordinador.Usado ;      
+        usocubiculo = Coordinador.Usado ;  
     }
-
-   
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
@@ -112,7 +107,7 @@ public class Ven_Cubico extends javax.swing.JFrame {
         jTextField1.setBackground(new java.awt.Color(1, 1, 1));
         jTextField1.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(216, 255, 0));
-        jTextField1.setText("Desarrollado by Maryon  Torres  2015");
+        jTextField1.setText("Desarrollado por Maryon  Torres  2015");
         jTextField1.setCaretColor(new java.awt.Color(227, 212, 36));
         jTextField1.setEnabled(false);
         jTextField1.setFocusTraversalPolicyProvider(true);
@@ -207,7 +202,7 @@ public class Ven_Cubico extends javax.swing.JFrame {
     private void bt_Cubico1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_Cubico1ActionPerformed
         this.miCoordinador.mostrarCubiculo(1);
        // if (usocubiculo) {
-         
+           miCoordinador.IniciarCubiculo(); // iniciamos el cubiculo
            bt_Cubico1.setBackground(Color.blue); 
        //}
         
@@ -217,6 +212,7 @@ public class Ven_Cubico extends javax.swing.JFrame {
     private void bt_Cubico2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_Cubico2ActionPerformed
         bt_Cubico2.setBackground(Color.CYAN);
         this.miCoordinador.mostrarCubiculo(2);
+        miCoordinador.IniciarCubiculo();
     }//GEN-LAST:event_bt_Cubico2ActionPerformed
 
     private void bt_Cubico3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_Cubico3ActionPerformed

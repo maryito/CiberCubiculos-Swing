@@ -11,10 +11,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-import javax.swing.JLabel;
 import ventanas.Ven_Cubico;
 import ventanas.VentanaRegistrar;
-import ventanas.ven_Principal;
 
 /**
  *
@@ -24,23 +22,28 @@ public class Procesos implements Runnable{
     String hora, minutos, segundos, ampm, fecha, tiempo ;
     Calendar calendario;
     int CubiculoMinuto=0, CubiculoSegundo=0,x=0;
-    boolean inicio = true;
+    static boolean inicio = true, ini_cubiculo = false;
     private Coordinador miCoordinador;
     @Override
     public void run() {
         while(inicio){
           //tiempo=("Fecha: "+Fecha()+" "+ Hora());
-          VentanaRegistrar.lb_hora.setText("Fecha: "+Fecha()+" "+ Hora());
-          
+          VentanaRegistrar.lb_hora.setText("Fecha: "+Fecha()+" "+ Hora());          
             //System.out.println(""+VentanaRegistrar.lb_hora.getText());
-            try {
-               // Thread.sleep(1000);
-                Thread.sleep(50);
-                TiempoCubico(x);
-                x++;
-            } catch (InterruptedException e) {
-            }             
-        }
+          
+        //manejo del tiempo de los cubilos
+            while (ini_cubiculo){  
+              try {
+                   // Thread.sleep(1000);
+                    Thread.sleep(10);
+                    TiempoCubico(x);
+                    x++;
+                } catch (InterruptedException e) {
+                    System.out.println("Acabo el proceso del Cubico");
+                }   
+              }
+            }
+       
         
     }
     public  String Fecha(){
@@ -73,7 +76,16 @@ public class Procesos implements Runnable{
     private void TiempoCubico(int x) {
        // System.out.println(CubiculoMinuto+":"+ CubiculoSegundo);
         CubiculoSegundo++;
-        Ven_Cubico.bt_Cubico1.setText(CubiculoMinuto+":"+ CubiculoSegundo);
+        String seg="0", min="0";
+        if (CubiculoSegundo < 10)seg ="0"+CubiculoSegundo;
+        else seg =""+CubiculoSegundo;
+        
+        if(CubiculoMinuto < 10) min ="0"+CubiculoMinuto;
+        else min =""+CubiculoMinuto;
+        
+        Ven_Cubico.bt_Cubico1.setText(min+":"+ seg);
+        System.out.println(min+":"+ seg);
+        
         if (CubiculoSegundo >59){
             CubiculoSegundo=0;
             CubiculoMinuto++;
@@ -99,7 +111,7 @@ public class Procesos implements Runnable{
                 Ven_Cubico.bt_Cubico8.setBackground(Color.BLUE);
                 Ven_Cubico.bt_Cubico9.setBackground(Color.BLUE);
             }
-            else if(CubiculoMinuto >29){
+            else if(CubiculoMinuto >30){
                 CubiculoMinuto=0;
                 //miCoordinador.ManejoStatus("cubiculoTiempo");
                 Ven_Cubico.bt_Cubico1.setBackground(Color.red);
@@ -111,7 +123,8 @@ public class Procesos implements Runnable{
                 Ven_Cubico.bt_Cubico7.setBackground(Color.red);
                 Ven_Cubico.bt_Cubico8.setBackground(Color.red);
                 Ven_Cubico.bt_Cubico9.setBackground(Color.red);
-                
+                ini_cubiculo = false; //detenemos el hilo
+                       
                 
             }
         }

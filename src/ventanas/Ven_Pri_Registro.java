@@ -10,7 +10,6 @@ import java.awt.Dimension;
 import java.awt.Rectangle;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -74,7 +73,7 @@ public class Ven_Pri_Registro extends javax.swing.JFrame {
         jTextField1.setBackground(new java.awt.Color(1, 1, 1));
         jTextField1.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(216, 255, 0));
-        jTextField1.setText("Desarrollado by Maryon  Torres  2015");
+        jTextField1.setText("Desarrollado por Maryon  Torres  2015");
         jTextField1.setCaretColor(new java.awt.Color(227, 212, 36));
         jTextField1.setEnabled(false);
         jTextField1.setFocusTraversalPolicyProvider(true);
@@ -127,6 +126,7 @@ public class Ven_Pri_Registro extends javax.swing.JFrame {
 
     private void BotonRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRegistrarActionPerformed
          miCoordinador.mostrarVentanaRegistro(); 
+         miCoordinador.Limpiar();
     }//GEN-LAST:event_BotonRegistrarActionPerformed
 
     private void BotonConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonConsultarActionPerformed

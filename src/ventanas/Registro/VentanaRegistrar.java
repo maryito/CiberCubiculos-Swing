@@ -353,7 +353,7 @@ public class VentanaRegistrar extends javax.swing.JFrame{
         jTextField1.setBackground(new java.awt.Color(1, 1, 1));
         jTextField1.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(216, 255, 0));
-        jTextField1.setText("Desarrollado by Maryon  Torres  2015");
+        jTextField1.setText("Desarrollado por Maryon  Torres  2015");
         jTextField1.setCaretColor(new java.awt.Color(227, 212, 36));
         jTextField1.setEnabled(false);
         jTextField1.setFocusTraversalPolicyProvider(true);

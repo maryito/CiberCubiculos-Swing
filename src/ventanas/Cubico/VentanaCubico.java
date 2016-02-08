@@ -3,12 +3,9 @@ package ventanas.Cubico;
 import controladores.Coordinador;
 import java.awt.Dimension;
 import java.awt.Rectangle;
-import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import ventanas.ven_Principal;
-import java.lang.String;
-import java.util.Formatter;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -87,11 +84,11 @@ public class VentanaCubico extends javax.swing.JFrame {
         cb_10 = new javax.swing.JCheckBox();
         cb_9 = new javax.swing.JCheckBox();
         lt_fecha1 = new javax.swing.JLabel();
+        bt_SeleccionarTodo = new java.awt.Button();
         jScrollPane1 = new javax.swing.JScrollPane();
         jt_Cubico = new javax.swing.JTable();
         bt_Aceptar = new javax.swing.JButton();
         bt_cancelar = new javax.swing.JButton();
-        jSeparator1 = new javax.swing.JSeparator();
         Lb_titulo3 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
@@ -191,64 +188,75 @@ public class VentanaCubico extends javax.swing.JFrame {
         cb_2.setForeground(new java.awt.Color(254, 254, 254));
         cb_2.setText("2.  Respetar el tiempo de uso (2 horas)");
         jp_lineamineto.add(cb_2);
-        cb_2.setBounds(70, 70, 690, 23);
+        cb_2.setBounds(70, 60, 690, 23);
 
         cb_3.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_3.setText("3.  Realiza trabajos y/o estudiar en grupo. No elaboraremos maquetas ni similares.");
         jp_lineamineto.add(cb_3);
-        cb_3.setBounds(70, 100, 710, 23);
+        cb_3.setBounds(70, 80, 710, 23);
 
         cb_4.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_4.setText("4.  No utilizar: exactos, pilotos, gomas,hielo seco, carton, masilla, pintura, etc.");
         jp_lineamineto.add(cb_4);
-        cb_4.setBounds(70, 130, 690, 23);
+        cb_4.setBounds(70, 100, 690, 23);
 
         cb_8.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_8.setText("8.  Dejar la mesa y sillas libres de retos de deshechos de borrador, papeles u otros.");
         jp_lineamineto.add(cb_8);
-        cb_8.setBounds(70, 250, 740, 23);
+        cb_8.setBounds(70, 180, 740, 23);
 
         cb_7.setBackground(new java.awt.Color(1, 1, 1));
         cb_7.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_7.setForeground(new java.awt.Color(254, 254, 254));
         cb_7.setText("7.  Evitar la ingesta de alimentos y/o bebidas, incluyendo agua.");
         jp_lineamineto.add(cb_7);
-        cb_7.setBounds(70, 220, 730, 23);
+        cb_7.setBounds(70, 160, 730, 23);
 
         cb_6.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_6.setText("6.  Llegar puntualmente a la hora de la reservacion o maximo 15 minutos despues.");
         jp_lineamineto.add(cb_6);
-        cb_6.setBounds(70, 190, 720, 23);
+        cb_6.setBounds(70, 140, 720, 23);
 
         cb_5.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_5.setText("5.  Mantener un comportamiento ejemplar: voz, baja, uso de audífonos.");
         jp_lineamineto.add(cb_5);
-        cb_5.setBounds(70, 160, 690, 23);
+        cb_5.setBounds(70, 120, 690, 23);
 
         cb_12.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_12.setText("12. Reportar cualquier incidencia que de presente al entrar o al salir.");
         jp_lineamineto.add(cb_12);
-        cb_12.setBounds(70, 360, 700, 23);
+        cb_12.setBounds(70, 260, 700, 23);
 
         cb_11.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_11.setText("11. Cerrar y devolver la llave");
         jp_lineamineto.add(cb_11);
-        cb_11.setBounds(70, 330, 690, 23);
+        cb_11.setBounds(70, 240, 690, 23);
 
         cb_10.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_10.setText("10. Recoger todas nuestras pertenencias.");
         jp_lineamineto.add(cb_10);
-        cb_10.setBounds(70, 300, 690, 23);
+        cb_10.setBounds(70, 220, 690, 23);
 
         cb_9.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_9.setText("9.  Colocar las sillas en su lugar correspondiente: debajo de la mesa.");
         jp_lineamineto.add(cb_9);
-        cb_9.setBounds(70, 270, 710, 23);
+        cb_9.setBounds(70, 200, 710, 23);
 
         lt_fecha1.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         lt_fecha1.setText("NOS COMPROMETEMOS A ");
         jp_lineamineto.add(lt_fecha1);
         lt_fecha1.setBounds(70, 10, 237, 18);
+
+        bt_SeleccionarTodo.setBackground(new java.awt.Color(66, 178, 222));
+        bt_SeleccionarTodo.setLabel("Marcar Todo");
+        bt_SeleccionarTodo.setName("Marcar Todo"); // NOI18N
+        bt_SeleccionarTodo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_SeleccionarTodoActionPerformed(evt);
+            }
+        });
+        jp_lineamineto.add(bt_SeleccionarTodo);
+        bt_SeleccionarTodo.setBounds(10, 290, 90, 23);
 
         jt_Cubico.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -365,8 +373,8 @@ public class VentanaCubico extends javax.swing.JFrame {
                         .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -383,11 +391,10 @@ public class VentanaCubico extends javax.swing.JFrame {
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jt_idRepres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jTextField5.setEditable(false);
@@ -405,47 +412,49 @@ public class VentanaCubico extends javax.swing.JFrame {
         jLayeredPane1Layout.setHorizontalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addGap(503, 503, 503)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addGap(197, 197, 197)
-                .addComponent(Lb_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 706, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(lt_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1010, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(Lb_titulo2, javax.swing.GroupLayout.PREFERRED_SIZE, 830, javax.swing.GroupLayout.PREFERRED_SIZE))))
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addComponent(jp_lineamineto, javax.swing.GroupLayout.PREFERRED_SIZE, 980, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 980, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addComponent(Lb_titulo3, javax.swing.GroupLayout.PREFERRED_SIZE, 706, javax.swing.GroupLayout.PREFERRED_SIZE))))
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
                 .addGap(47, 47, 47)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 990, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addComponent(jp_lineamineto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(30, 30, 30))
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 990, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane1Layout.createSequentialGroup()
+                        .addComponent(Lb_titulo2, javax.swing.GroupLayout.PREFERRED_SIZE, 830, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(101, 101, 101))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane1Layout.createSequentialGroup()
+                        .addComponent(bt_Aceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(79, 79, 79)
+                        .addComponent(bt_cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(130, 130, 130))))
             .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addGap(137, 137, 137)
-                .addComponent(bt_Aceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79)
-                .addComponent(bt_cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 980, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addGap(503, 503, 503)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addGap(197, 197, 197)
+                        .addComponent(Lb_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 706, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(lt_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addGap(57, 57, 57)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1010, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addGap(187, 187, 187)
+                        .addComponent(Lb_titulo3, javax.swing.GroupLayout.PREFERRED_SIZE, 706, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 980, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -457,33 +466,26 @@ public class VentanaCubico extends javax.swing.JFrame {
                 .addGap(10, 10, 10)
                 .addComponent(lt_fecha)
                 .addGap(3, 3, 3)
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addGap(164, 164, 164)
-                        .addComponent(Lb_titulo2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(6, 6, 6)
-                .addComponent(jp_lineamineto, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(29, 29, 29)
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(Lb_titulo3)))
-                .addGap(11, 11, 11)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(3, 3, 3)
+                .addComponent(Lb_titulo2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jp_lineamineto, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Lb_titulo3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
+                .addGap(26, 26, 26)
                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bt_Aceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bt_cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jLayeredPane1.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(Lb_titulo2, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -493,7 +495,6 @@ public class VentanaCubico extends javax.swing.JFrame {
         jLayeredPane1.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(bt_Aceptar, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(bt_cancelar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jSeparator1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(Lb_titulo3, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jPanel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jTextField5, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -502,22 +503,36 @@ public class VentanaCubico extends javax.swing.JFrame {
 
         jScrollPane2.setViewportView(jLayeredPane1);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 686));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 850));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void bt_AceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_AceptarActionPerformed
-        // TODO add your handling code here:
-        registrar();
-
-    }//GEN-LAST:event_bt_AceptarActionPerformed
 
     private void bt_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_cancelarActionPerformed
         // TODO add your handling code here:
         miCoordinador.CubiculoStatus(0);
         limpiar();
     }//GEN-LAST:event_bt_cancelarActionPerformed
+
+    private void bt_AceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_AceptarActionPerformed
+        // TODO add your handling code here:
+        registrar();
+    }//GEN-LAST:event_bt_AceptarActionPerformed
+
+    private void bt_SeleccionarTodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_SeleccionarTodoActionPerformed
+        cb_1.setSelected(true);
+        cb_2.setSelected(true);
+        cb_3.setSelected(true);
+        cb_4.setSelected(true);
+        cb_5.setSelected(true);
+        cb_6.setSelected(true);
+        cb_7.setSelected(true);
+        cb_8.setSelected(true);
+        cb_9.setSelected(true);
+        cb_10.setSelected(true);
+        cb_11.setSelected(true);
+        cb_12.setSelected(true);
+    }//GEN-LAST:event_bt_SeleccionarTodoActionPerformed
        public void inico(int cubico){
         DefaultTableModel modelo = (DefaultTableModel) jt_Cubico.getModel();   
         modelo.setNumRows(7);
@@ -554,13 +569,15 @@ public class VentanaCubico extends javax.swing.JFrame {
             }else{
                 // estamos en la manana 
                 System.out.println("1- estamos en la manana ");
-                int tem= Integer.parseInt(salida[0])-12;
-                if(tem < 0){
-                     salida[0]= ""+12;
-                }
-               lb_hora.setText(salida[0]+""+salida[2]+" AM");
-               lb_horaSALIDAD.setText( salida[1]+""+salida[2]+" AM");
-              
+                int man = Integer.parseInt(salida[0]);
+                int tem= man-12;
+                
+                if(tem == 0) salida[0]= ""+12;
+                else salida[0] = ""+man;
+                
+                lb_hora.setText(salida[0]+""+salida[2]+" AM");
+                lb_horaSALIDAD.setText( salida[1]+""+salida[2]+" AM");
+               
             }
             
         }else{
@@ -568,13 +585,13 @@ public class VentanaCubico extends javax.swing.JFrame {
             if(Horas>=10){
                 // pasaremos a la tarde
                 System.out.println(" ___ estamos en la tarde ");
-                //salida[2] = hora.substring(2,9);
-                int tem= Integer.parseInt(salida[1])-12;
-                if(tem == 0){
-                     salida[1]= ""+12;
-                }else{
-                salida[1] = ""+tem;
-                }
+                
+                int tarde = Integer.parseInt(salida[0]);
+                int tem= tarde-12;
+                
+                if(tem == 0)  salida[1]= ""+12;
+                else salida[1] = ""+tarde;
+                
                 lb_hora.setText(salida[0]+""+salida[2]+" PM");
                 lb_horaSALIDAD.setText( salida[1]+""+salida[2]+" AM");                
                 
@@ -595,6 +612,7 @@ public class VentanaCubico extends javax.swing.JFrame {
     private javax.swing.JLabel Lb_titulo2;
     private javax.swing.JLabel Lb_titulo3;
     private javax.swing.JButton bt_Aceptar;
+    private java.awt.Button bt_SeleccionarTodo;
     private javax.swing.JButton bt_cancelar;
     private javax.swing.JCheckBox cb_1;
     private javax.swing.JCheckBox cb_10;
@@ -613,7 +631,6 @@ public class VentanaCubico extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;

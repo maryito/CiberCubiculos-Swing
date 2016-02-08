@@ -1,10 +1,7 @@
 package ventanas;
 
 import controladores.Coordinador;
-import java.util.Vector;
 import javax.swing.table.DefaultTableModel;
-import java.lang.String;
-import java.util.Arrays;
 import javax.swing.JOptionPane;
 /**
  *

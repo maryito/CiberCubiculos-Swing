@@ -141,7 +141,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="ff" red="d8" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Desarrollado by Maryon  Torres  2015"/>
+            <Property name="text" type="java.lang.String" value="Desarrollado Por UIPianos 2015"/>
             <Property name="caretColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="24" green="d4" red="e3" type="rgb"/>
             </Property>
