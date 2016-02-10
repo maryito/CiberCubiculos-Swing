@@ -135,8 +135,45 @@ public class UsuarioDao {
 		}
              return data;
         }
-}
-     
+
+      public void bi_regristro_datos(String id){
+         try {
+            System.out.println("consultado los datos");
+            Connection connection = null;
+            CallableStatement cStmt = null;
+            Conexion conexxion = new  Conexion();
+            
+            String estadoConexion = (conexxion.EstadoConexion());
+            if (estadoConexion == "error"){
+                System.out.println("NO hay conexion en BD");
+            }else{
+                connection = conexxion.getConnection();
+               
+                cStmt = connection.prepareCall("{call bi_usuario_cs (?) }");
+                cStmt.setString(1, id);
+               // cStmt.registerOutParameter(2, java.sql.Types.VARCHAR);
+                cStmt.getResultSet();
+                cStmt.execute();
+                ResultSet rs = null;
+                
+                rs = cStmt.getResultSet(); 
+                int x=0;
+                while(rs.next()){ 
+                    System.out.println(" resultado : "+rs.getString("fechahora")
+                        +","+ rs.getString("nombre")
+                        +","+ rs.getString("cedula")
+                        +","+ rs.getString("sexo")
+                        +","+rs.getString("carrera"));
+                    x++;
+                }
+                }
+            }
+            catch (SQLException ex) {
+                ex.printStackTrace();    
+            }
+    }
+
+}    
 //    public UsuarioVo consultarUsuario(String doc) {
 //      System.out.println("consultando...");
 //        Connection connection = null;

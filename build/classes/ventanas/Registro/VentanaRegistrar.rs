@@ -1,0 +1,2 @@
+ventanas.VentanaRegistrar$1
+ventanas.VentanaRegistrar

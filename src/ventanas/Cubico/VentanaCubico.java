@@ -3,6 +3,7 @@ package ventanas.Cubico;
 import controladores.Coordinador;
 import java.awt.Dimension;
 import java.awt.Rectangle;
+import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import ventanas.ven_Principal;
@@ -20,11 +21,16 @@ public class VentanaCubico extends javax.swing.JFrame {
     private Rectangle pantalla;
      public VentanaCubico(ven_Principal miVentana, boolean b) {
           initComponents();
-          setLocationRelativeTo(null);
-          setResizable(false); 
-//          tamPantalla = Toolkit.getDefaultToolkit().getScreenSize();
-//          pantalla = new Rectangle(tamPantalla);
-//          setBounds(pantalla);
+          
+        float an = 0.68F; // una ventana al 50% del tamaño de la pantalla
+        float escalar = 0.9F;
+        int ancho = (int)(Toolkit.getDefaultToolkit().getScreenSize(). width*an);
+        int alto = (int)(Toolkit.getDefaultToolkit().getScreenSize(). height*escalar);
+        this.setSize(ancho,alto);
+        
+        setLocationRelativeTo(null);
+        setResizable(false);  
+        
         addWindowListener(new WindowAdapter(){
         	
         @Override
@@ -119,10 +125,10 @@ public class VentanaCubico extends javax.swing.JFrame {
         lb_hora.setFont(new java.awt.Font("Ubuntu", 2, 18)); // NOI18N
         lb_hora.setForeground(new java.awt.Color(39, 127, 228));
         lb_hora.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lb_hora.setText("entrada");
+        lb_hora.setText(" entrada");
         lb_hora.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 185, 0)));
         lb_hora.setEnabled(false);
-        jPanel1.add(lb_hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 11, 120, 30));
+        jPanel1.add(lb_hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 11, 110, 30));
 
         lb_horaSALIDAD.setFont(new java.awt.Font("Ubuntu", 2, 18)); // NOI18N
         lb_horaSALIDAD.setForeground(new java.awt.Color(39, 127, 228));
@@ -181,14 +187,14 @@ public class VentanaCubico extends javax.swing.JFrame {
         cb_1.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_1.setText("1.  No Extraviar las llaves.");
         jp_lineamineto.add(cb_1);
-        cb_1.setBounds(70, 40, 680, 23);
+        cb_1.setBounds(70, 40, 710, 23);
 
         cb_2.setBackground(new java.awt.Color(1, 1, 1));
         cb_2.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_2.setForeground(new java.awt.Color(254, 254, 254));
         cb_2.setText("2.  Respetar el tiempo de uso (2 horas)");
         jp_lineamineto.add(cb_2);
-        cb_2.setBounds(70, 60, 690, 23);
+        cb_2.setBounds(70, 60, 710, 23);
 
         cb_3.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_3.setText("3.  Realiza trabajos y/o estudiar en grupo. No elaboraremos maquetas ni similares.");
@@ -198,44 +204,44 @@ public class VentanaCubico extends javax.swing.JFrame {
         cb_4.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_4.setText("4.  No utilizar: exactos, pilotos, gomas,hielo seco, carton, masilla, pintura, etc.");
         jp_lineamineto.add(cb_4);
-        cb_4.setBounds(70, 100, 690, 23);
+        cb_4.setBounds(70, 100, 710, 23);
 
         cb_8.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_8.setText("8.  Dejar la mesa y sillas libres de retos de deshechos de borrador, papeles u otros.");
         jp_lineamineto.add(cb_8);
-        cb_8.setBounds(70, 180, 740, 23);
+        cb_8.setBounds(70, 180, 710, 23);
 
         cb_7.setBackground(new java.awt.Color(1, 1, 1));
         cb_7.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_7.setForeground(new java.awt.Color(254, 254, 254));
         cb_7.setText("7.  Evitar la ingesta de alimentos y/o bebidas, incluyendo agua.");
         jp_lineamineto.add(cb_7);
-        cb_7.setBounds(70, 160, 730, 23);
+        cb_7.setBounds(70, 160, 710, 23);
 
         cb_6.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_6.setText("6.  Llegar puntualmente a la hora de la reservacion o maximo 15 minutos despues.");
         jp_lineamineto.add(cb_6);
-        cb_6.setBounds(70, 140, 720, 23);
+        cb_6.setBounds(70, 140, 710, 23);
 
         cb_5.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_5.setText("5.  Mantener un comportamiento ejemplar: voz, baja, uso de audífonos.");
         jp_lineamineto.add(cb_5);
-        cb_5.setBounds(70, 120, 690, 23);
+        cb_5.setBounds(70, 120, 710, 23);
 
         cb_12.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_12.setText("12. Reportar cualquier incidencia que de presente al entrar o al salir.");
         jp_lineamineto.add(cb_12);
-        cb_12.setBounds(70, 260, 700, 23);
+        cb_12.setBounds(70, 260, 710, 23);
 
         cb_11.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_11.setText("11. Cerrar y devolver la llave");
         jp_lineamineto.add(cb_11);
-        cb_11.setBounds(70, 240, 690, 23);
+        cb_11.setBounds(70, 240, 710, 23);
 
         cb_10.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_10.setText("10. Recoger todas nuestras pertenencias.");
         jp_lineamineto.add(cb_10);
-        cb_10.setBounds(70, 220, 690, 23);
+        cb_10.setBounds(70, 220, 710, 23);
 
         cb_9.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         cb_9.setText("9.  Colocar las sillas en su lugar correspondiente: debajo de la mesa.");
@@ -503,7 +509,7 @@ public class VentanaCubico extends javax.swing.JFrame {
 
         jScrollPane2.setViewportView(jLayeredPane1);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 850));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 810));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -559,7 +565,7 @@ public class VentanaCubico extends javax.swing.JFrame {
         salida[2]= hora.substring(2, 5);// minutos
         Horas = Integer.parseInt(salida[0]); // convertidas en numero
         salida[1] =  Horas >= 9 ? "" + (Horas+2) : "0" + (Horas+2);
-        if(listo == 1){
+         if(listo == 1){
             System.out.println("1---- "+listo);
             if(Horas>=10){
                 // pasaremos a la tarde
@@ -569,15 +575,13 @@ public class VentanaCubico extends javax.swing.JFrame {
             }else{
                 // estamos en la manana 
                 System.out.println("1- estamos en la manana ");
-                int man = Integer.parseInt(salida[0]);
-                int tem= man-12;
-                
-                if(tem == 0) salida[0]= ""+12;
-                else salida[0] = ""+man;
-                
-                lb_hora.setText(salida[0]+""+salida[2]+" AM");
-                lb_horaSALIDAD.setText( salida[1]+""+salida[2]+" AM");
-               
+                int tem= Integer.parseInt(salida[0])-12;
+                if(tem < 0){
+                     salida[0]= ""+12;
+                }
+               lb_hora.setText(salida[0]+""+salida[2]+" AM");
+               lb_horaSALIDAD.setText( salida[1]+""+salida[2]+" AM");
+              
             }
             
         }else{
@@ -585,13 +589,13 @@ public class VentanaCubico extends javax.swing.JFrame {
             if(Horas>=10){
                 // pasaremos a la tarde
                 System.out.println(" ___ estamos en la tarde ");
-                
-                int tarde = Integer.parseInt(salida[0]);
-                int tem= tarde-12;
-                
-                if(tem == 0)  salida[1]= ""+12;
-                else salida[1] = ""+tarde;
-                
+                //salida[2] = hora.substring(2,9);
+                int tem= Integer.parseInt(salida[1])-12;
+                if(tem == 0){
+                     salida[1]= ""+12;
+                }else{
+                salida[1] = ""+tem;
+                }
                 lb_hora.setText(salida[0]+""+salida[2]+" PM");
                 lb_horaSALIDAD.setText( salida[1]+""+salida[2]+" AM");                
                 

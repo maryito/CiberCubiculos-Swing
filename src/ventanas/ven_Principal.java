@@ -71,9 +71,9 @@ public class ven_Principal extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Cantarell", 0, 48)); // NOI18N
-        jLabel1.setText("BIENVENIDO AL SISTEMA ");
+        jLabel1.setText("BIENVENIDO AL CIBERCUBíCULO");
         jLabel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, -1, -1));
 
         bt_Computadoras.setFont(new java.awt.Font("Cantarell", 1, 24)); // NOI18N
         bt_Computadoras.setText("Computadoras");
@@ -83,7 +83,7 @@ public class ven_Principal extends javax.swing.JFrame {
                 bt_ComputadorasActionPerformed(evt);
             }
         });
-        jPanel2.add(bt_Computadoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 228, 94));
+        jPanel2.add(bt_Computadoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 228, 94));
         bt_Computadoras.getAccessibleContext().setAccessibleDescription("");
 
         bt_Cubiculos.setFont(new java.awt.Font("Cantarell", 1, 24)); // NOI18N
@@ -93,7 +93,7 @@ public class ven_Principal extends javax.swing.JFrame {
                 bt_CubiculosActionPerformed(evt);
             }
         });
-        jPanel2.add(bt_Cubiculos, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 180, 253, 94));
+        jPanel2.add(bt_Cubiculos, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, 253, 94));
 
         jTextField1.setBackground(new java.awt.Color(1, 1, 1));
         jTextField1.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N

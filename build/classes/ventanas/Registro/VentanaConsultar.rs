@@ -1,0 +1,4 @@
+ventanas.VentanaConsultar$1
+ventanas.VentanaConsultar$2
+ventanas.VentanaConsultar$3
+ventanas.VentanaConsultar

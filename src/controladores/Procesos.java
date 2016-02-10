@@ -84,7 +84,7 @@ public class Procesos implements Runnable{
         else min =""+CubiculoMinuto;
         
         Ven_Cubico.bt_Cubico1.setText(min+":"+ seg);
-        System.out.println(min+":"+ seg);
+      //  System.out.println(min+":"+ seg);
         
         if (CubiculoSegundo >59){
             CubiculoSegundo=0;
@@ -128,5 +128,6 @@ public class Procesos implements Runnable{
                 
             }
         }
+       
     }
 }

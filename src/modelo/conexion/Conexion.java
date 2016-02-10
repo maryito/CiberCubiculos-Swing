@@ -6,8 +6,11 @@ public class Conexion {
 	private String usuario="test";
 	private String password="test";
 	//private String url="jdbc::mysql://localhost/"+nombreBd;
-	private String url="jdbc:mysql://localhost:3306/"+nombreBd;
+	//private String url="jdbc:mysql://localhost:3306/"+nombreBd;
+       // private String url="jdbc:mysql://45.55.198.111:3306/"+nombreBd;
 	
+        private String url="jdbc:mysql://162.243.118.190:3306/"+nombreBd;
+	          
 	Connection conn=null;
 	//correo morenoannamae@gmail.com 60910972
     private String Estado = "";
