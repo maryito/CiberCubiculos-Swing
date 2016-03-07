@@ -75,6 +75,7 @@ public class Procesos implements Runnable{
 
     private void TiempoCubico(int x) {
        // System.out.println(CubiculoMinuto+":"+ CubiculoSegundo);
+
         CubiculoSegundo++;
         String seg="0", min="0";
         if (CubiculoSegundo < 10)seg ="0"+CubiculoSegundo;

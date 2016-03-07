@@ -1,5 +1,6 @@
 package ventanas.Cubico;
 
+import com.sun.glass.events.KeyEvent;
 import controladores.Coordinador;
 import java.awt.Dimension;
 import java.awt.Rectangle;
@@ -14,7 +15,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author maryonday
  */
-public class VentanaCubico extends javax.swing.JFrame {
+    public class VentanaCubico extends javax.swing.JFrame {
     private Coordinador miCoordinador;
     private int nun_cubico; 
     private Dimension tamPantalla;
@@ -162,6 +163,11 @@ public class VentanaCubico extends javax.swing.JFrame {
         tx_horaExtra.setColumns(1);
         tx_horaExtra.setFont(new java.awt.Font("Cantarell", 2, 18)); // NOI18N
         tx_horaExtra.setForeground(new java.awt.Color(39, 127, 228));
+        tx_horaExtra.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tx_horaExtraKeyPressed(evt);
+            }
+        });
         jPanel1.add(tx_horaExtra, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 75, 106, 40));
 
         tx_horaSALIDAD_extra.setColumns(1);
@@ -539,6 +545,17 @@ public class VentanaCubico extends javax.swing.JFrame {
         cb_11.setSelected(true);
         cb_12.setSelected(true);
     }//GEN-LAST:event_bt_SeleccionarTodoActionPerformed
+
+    private void tx_horaExtraKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tx_horaExtraKeyPressed
+         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+           System.out.println("Presionaste enter");
+           int num = Integer.parseInt(tx_horaExtra.getText());
+           num *= 100;
+           String e = ""+num;
+           tx_horaExtra.setText(""+(num/100)+":"+e.substring(2, 3));
+       }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tx_horaExtraKeyPressed
        public void inico(int cubico){
         DefaultTableModel modelo = (DefaultTableModel) jt_Cubico.getModel();   
         modelo.setNumRows(7);
@@ -576,7 +593,7 @@ public class VentanaCubico extends javax.swing.JFrame {
                 // estamos en la manana 
                 System.out.println("1- estamos en la manana ");
                 int tem= Integer.parseInt(salida[0])-12;
-                if(tem < 0){
+                if(tem == 0){
                      salida[0]= ""+12;
                 }
                lb_hora.setText(salida[0]+""+salida[2]+" AM");

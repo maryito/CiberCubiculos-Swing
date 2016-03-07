@@ -35,7 +35,8 @@ public final  class ven extends javax.swing.JFrame
   
   public  void graficoGenero(){
       // por actualizar y mejorar
-        /* // traemos los datos de la consulta y recoleccion de datos 
+   /*
+      // traemos los datos de la consulta y recoleccion de datos 
        Object[] datos = miCoordinador.bi_consulta_rg_sexo();
        int total = (int) datos[0];
        int f = (int) datos[2];
@@ -60,8 +61,8 @@ public final  class ven extends javax.swing.JFrame
         setLocationRelativeTo(null);
         setResizable(false); 
         frame.pack();
-        frame.setVisible(true);*/
-
+        frame.setVisible(true);
+*/
    }
   
    }

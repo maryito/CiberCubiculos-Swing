@@ -1,4 +1,4 @@
-/*
+    /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -62,10 +62,10 @@ public class Logica {
     
     public  void Registro_leer_off_actualiza() {
       System.out.println("metodo leer");
-      String nombreArchivo="/home/maryonday/NetBeansProjects/Sistema de Registro Biblioteca/src/OffLinea.csv";
+      String nombreArchivo="/home/maryonday/Documentos/Github/CiberCubiculos/src/OffLinea.csv";
        String re = null;   
        FileReader archivo = null;
-       String linea = "";
+       String linea = ""; 
        //String [][]   Datos = new String[100][6];
        try {
          archivo = new FileReader(nombreArchivo);
@@ -81,13 +81,6 @@ public class Logica {
              actualizar.setCarrera(fila[4].replace(";", ""));
              UsuarioDao bd = new UsuarioDao();
              re = bd.registraUsuario(actualizar);
-//             for(String x: fila){
-//                  Datos[i][y]= x ;
-//              // System.out.print("{"+i+","+y+"}"+ Datos[i][y]);
-//                y++;
-//             }
-           //  i++;           
-          //  y=0; 
          }
         // mandamos la respuesta del ultimo registro  
         miCoordinador.ManejoStatus(re);

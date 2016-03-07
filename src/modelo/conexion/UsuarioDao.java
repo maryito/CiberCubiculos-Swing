@@ -15,6 +15,7 @@ public class UsuarioDao {
 	}
    
     public String registraUsuario(UsuarioVo miUsuarioVo){
+        System.out.println("_RESGISTRANO DATOS..._ REMOTA DB");
 		String resultado="";
 		
 		Connection  connection= null;
@@ -49,6 +50,7 @@ public class UsuarioDao {
 	}
         
     public String RegistrarFueraLinea(UsuarioVo miUsuarioVo) {
+        System.out.println("_Guardando Localmente..._ LOCAL");
      ArrayList<String> lista = new ArrayList<String>();
         lista.add((miUsuarioVo.getFechahora()));
         lista.add(",");
@@ -64,17 +66,14 @@ public class UsuarioDao {
         while(nombreIterator.hasNext()){
                 elemento = nombreIterator.next();
                 resultado += elemento+"";               
-        }
-      
-        System.out.println("en usuario veo"+resultado);
+        }       
         return resultado+";";
      } 
-    public static Object[] bi_regristro_consultar(String act){            
-            Object [] data = null;            
+    public static Object[] bi_regristro_consultar(String act){     
+        System.out.println("_consultando..._ CS");
+            Object [] data = new Object[1];            
             int total=0, m=0, f=0;
             try {
-                
-                System.out.println("consultando...");
                 Connection  connection= null;
                 CallableStatement cStmt = null;
                 Conexion conexxion = new Conexion();
@@ -96,10 +95,13 @@ public class UsuarioDao {
                 ResultSet  r = null;
                 rs = cStmt.getResultSet(); 
                 r =cStmt.getResultSet();
-                int n = 0;
+                int n = 0, size =0;
+                while(rs.next()){ size++;}
+                
                   if(act == "grafico"){ data = new Object[3];}
                   else{
-                data = new Object[100];}
+                data = new Object[size];}
+                  
                 Object fila =null;
                 while(rs.next()){ 
                     if(act == "grafico"){
@@ -136,87 +138,44 @@ public class UsuarioDao {
              return data;
         }
 
-      public void bi_regristro_datos(String id){
+      public Object[] bi_usuario_datos(String id){
+        System.out.println("_consultado los datos_  USUARIO=TRAER");
+         Object [] data = new Object[3];
          try {
-            System.out.println("consultado los datos");
             Connection connection = null;
             CallableStatement cStmt = null;
             Conexion conexxion = new  Conexion();
             
             String estadoConexion = (conexxion.EstadoConexion());
-            if (estadoConexion == "error"){
+            if ("error".equals(estadoConexion)){
                 System.out.println("NO hay conexion en BD");
+                return  data;
             }else{
                 connection = conexxion.getConnection();
                
                 cStmt = connection.prepareCall("{call bi_usuario_cs (?) }");
                 cStmt.setString(1, id);
-               // cStmt.registerOutParameter(2, java.sql.Types.VARCHAR);
+                
                 cStmt.getResultSet();
                 cStmt.execute();
                 ResultSet rs = null;
                 
                 rs = cStmt.getResultSet(); 
-                int x=0;
-                while(rs.next()){ 
-                    System.out.println(" resultado : "+rs.getString("fechahora")
-                        +","+ rs.getString("nombre")
-                        +","+ rs.getString("cedula")
+                int x=0;                
+               while(rs.next()){ 
+                  /* System.out.println(" resultado : "+ rs.getString("nombre")
                         +","+ rs.getString("sexo")
-                        +","+rs.getString("carrera"));
-                    x++;
+                        +","+rs.getString("carrera"));*/                    
+                    data[0] = rs.getString("nombre").trim();
+                    data[1] = rs.getString("sexo").trim();
+                    data[2] = rs.getString("carrera").trim();
+                    
                 }
-                }
-            }
-            catch (SQLException ex) {
+                } return data;
+            }catch (SQLException ex) {
                 ex.printStackTrace();    
+               return data;  
             }
     }
 
-}    
-//    public UsuarioVo consultarUsuario(String doc) {
-//      System.out.println("consultando...");
-//        Connection connection = null;
-//        Conexion miConexion= new Conexion();
-//        PreparedStatement statement = null;
-//        ResultSet result = null;
-//        
-//        UsuarioVo  miUsuario=null;
-//        
-//        connection=miConexion.getConnection();
-//        // verificar o averiguar la linea de 62 del video
-//        String consulta="SELECT * FROM usuario where documento= "+doc;        
-//            try {
-//
-//               // String consulta="SELECT * FROM usuario WHERE documento="+doc;
-//                statement=connection.prepareStatement(consulta);
-//               // statement.setString(1,doc);
-//                
-//                result = statement.executeQuery();
-//                
-//                while(result.next() == true){
-//                	System.out.println("documento: "+result.getString("documento")
-//        			 		+"nombre: "+result.getString("nombre")
-//        	 				+"profesion: "+result.getString("profesion")
-//		                	+"edad: "+result.getInt("edad")
-//		                	+"direccion: "+result.getString("direccion")
-//		                	+"telefono: "+result.getString("telefono"));                     
-//         
-//                   miUsuario= new UsuarioVo();
-//                   
-//                   miUsuario.setDocumento(result.getString("documento"));
-//                   miUsuario.setNombre(result.getString("nombre"));
-//                   miUsuario.setProfesion(result.getString("profesion"));
-//                   miUsuario.setEdad(result.getInt("edad"));
-//                   miUsuario.setDireccion(result.getString("direccion"));
-//                   miUsuario.setTelefono(result.getString("telefono"));
-//                   
-//                }
-//            } catch (SQLException e) {
-//            
-//                System.out.println("Error en la consulta del Usuario: "+e.getMessage());
-//            }
-//        
-//    return miUsuario;
-//    }
-
+} 

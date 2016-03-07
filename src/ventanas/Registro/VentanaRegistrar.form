@@ -172,61 +172,67 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="36" pref="36" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="lb_Cedula" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                          <Component id="txt_Cedula" min="-2" pref="250" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="lb_Nombre" min="-2" pref="140" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="txt_Nombre" min="-2" pref="250" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="pane_academia" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="lb_Sexo" min="-2" pref="140" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="rb_Femenino" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="rb_Masculino" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="lb_Cedula" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                          <Component id="txt_Cedula" min="-2" pref="201" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="lb_Nombre" min="-2" pref="140" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txt_Nombre" min="-2" pref="250" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="lb_Sexo" min="-2" pref="140" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <Component id="rb_Femenino" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="rb_Masculino" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="pane_academia" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txt_Cedula" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                              <Component id="lb_Cedula" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                              <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lb_Nombre" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                               <Component id="txt_Nombre" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txt_Cedula" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                              <Component id="lb_Cedula" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lb_Sexo" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                               <Component id="rb_Femenino" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                               <Component id="rb_Masculino" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                           <Component id="pane_academia" min="-2" pref="166" max="-2" attributes="0"/>
                           <EmptySpace pref="20" max="32767" attributes="0"/>
                       </Group>
@@ -244,6 +250,9 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_Nombre">
+                  <Properties>
+                    <Property name="enabled" type="boolean" value="false"/>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lb_Cedula">
                   <Properties>
@@ -255,6 +264,9 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_Cedula">
+                  <Events>
+                    <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_CedulaKeyPressed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lb_Sexo">
                   <Properties>
@@ -280,6 +292,7 @@
                       <Color blue="36" green="1e" red="b1" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Femenino"/>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="rb_Masculino">
@@ -297,6 +310,7 @@
                       <Color blue="36" green="1e" red="b1" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Masculino"/>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                 </Component>
                 <Container class="javax.swing.JPanel" name="pane_academia">
@@ -325,7 +339,7 @@
                                           <Component id="cb_ACD" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="cb_MP" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="19" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="cb_ING" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="cb_DR" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -410,6 +424,7 @@
                           <Color blue="36" green="1e" red="b1" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="DR"/>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="cb_ACD">
@@ -427,6 +442,7 @@
                           <Color blue="36" green="1e" red="b1" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="ACD"/>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="vista_cb_ACD"/>
@@ -447,6 +463,7 @@
                           <Color blue="36" green="1e" red="b1" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="MP"/>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="cb_ING">
@@ -464,6 +481,7 @@
                           <Color blue="36" green="1e" red="b1" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Ingenieria"/>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="cb_CA">
@@ -481,6 +499,7 @@
                           <Color blue="36" green="1e" red="b1" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="CA"/>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="cb_GLION">
@@ -498,6 +517,7 @@
                           <Color blue="36" green="1e" red="b1" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="GLION"/>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="cb_CS">
@@ -515,6 +535,7 @@
                           <Color blue="36" green="1e" red="b1" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="CS"/>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="cb_Otros">
@@ -532,10 +553,19 @@
                           <Color blue="36" green="1e" red="b1" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="OTROS"/>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
+                <Component class="javax.swing.JButton" name="jButton1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Buscar"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                  </Events>
+                </Component>
               </SubComponents>
             </Container>
             <Component class="javax.swing.JLabel" name="Lb_titulo1">
