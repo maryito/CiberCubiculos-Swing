@@ -7,15 +7,13 @@ public class Conexion {
 	private String nombreBd="biblioteca";
 	private String usuario="test";
 	private String password="test";
-        private String host="162.243.118.190";
+        private String host="lozalhost";
 	//private String url="jdbc::mysql://localhost/"+nombreBd;
-	//private String url="jdbc:mysql://localhost:3306/"+nombreBd;
-       // private String url="jdbc:mysql://45.55.198.111:3306/"+nombreBd;
+	//private String url="jdbc:mysql://localhost:33tus06/"+nombreBd;
 	
         private String url="jdbc:mysql://"+host+":3306/"+nombreBd;
 	          
 	Connection conn=null;
-	//correo morenoannamae@gmail.com 60910972
     static String Estado = "";
 
 	//contructor de la clase
